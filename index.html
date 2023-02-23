@@ -26,6 +26,7 @@
             if (xhr.readyState === xhr.DONE) {
                 if (xhr.status === 401) {
                 alert("Please Enter A Valid Discord Webhook")
+                location.reload();
                 }else{
                     alert("Spamming Discord Webhook Was Sucessfull")
                     while (true) {
