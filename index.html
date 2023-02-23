@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XenzoHook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="xeno-text">
+    <h1>XenzoHook</h1>
+    <input class ="input-webhook" type ="text" id="webhook" placeholder ="Enter Webhook Url:">
+    <input class ="input-user" type ="text" id="user" placeholder ="Enter Username:">
+</div>
+        <input class ="input-message" type ="text" id="message" placeholder ="Enter Message:">
+            </div>
+            <button type="button" class ="btn" id="create">Spam</button>
+            <script>
+            document.getElementById("create").onclick = function(){
+            var webhook = document.getElementById("webhook").value
+            var message = document.getElementById("message").value
+            var username = document.getElementById("user").value
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', webhook, true);
+            xhr.responseType = 'text';
+            xhr.onload = () => {
+            if (xhr.readyState === xhr.DONE) {
+                if (xhr.status === 401) {
+                alert("Please Enter A Valid Discord Webhook")
+                }else{
+                    alert("Spamming Discord Webhook Was Sucessfull")
+                    while (true) {
+                    var request = new XMLHttpRequest;
+                    request.open("POST", webhook);
+                    request.setRequestHeader('Content-type', 'application/json');
+                    var params = 
+                    {
+                    username: username,
+                    content: "@everyone" + message
+                }
+                request.send(JSON.stringify(params));
+                }
+        
+            } 
+         }
+    } 
+    xhr.send(null);
+    
+}
+</script>
+<body>
+</html>

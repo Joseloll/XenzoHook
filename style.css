@@ -1,0 +1,77 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial;
+    background:url('assets/background.gif');
+    background-size: cover;
+	background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+}
+                                            
+.xeno-text h1{
+    position: absolute;
+    left:28%; 
+    padding: 55px;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+} 
+.input-webhook {
+    position: absolute;
+    left:36%; 
+    top: 35%;
+    height: 65px;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 300px;
+    background: black;
+    color: white;
+    
+  }
+.input-user {
+    position: absolute;
+    left:36%; 
+    top: 49%;
+    height: 65px;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 300px;
+    background: black;
+    color: white;
+    
+  }
+.input-message {
+    position: absolute;
+    left:36%; 
+    top: 63%;
+    height: 65px;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 300px;
+    background: black;
+    color: white;
+    
+  }
+.btn{
+    position: absolute;
+    left:36%; 
+    top: 75%;
+    background-color: black;
+    padding:15px 20px;
+    border-radius: 30px;
+    border:none;
+    cursor:pointer;
+    width:300px;
+    font-size:18px;
+    box-shadow: 0px 0px 0px white;
+    color: white;
+    transition: 0.3 ease;
+} 
+.btn:hover{
+    box-shadow: 0px 0px 60px white;
+}
